@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "vars": "node index -f \"./test/vars.dank\""
+    "vars": "node index -f \"./test/vars.dank\"",
+    "if": "node index -f \"./test/if.dank\""
+    
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
     "commander": "^2.14.1",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "node-run-cmd": "^1.0.1"
   }
 }

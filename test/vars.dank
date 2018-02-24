@@ -1,9 +1,17 @@
-joke about clinical depression a = 5 haha yes
-joke about clinical depression b = 'my string' haha yes
-joke about clinical depression bool = deadass B haha yes
-joke about clinical depression falsy = not deadass B haha yes;
-lets get right into the news! (a) haha yes
+meme g = 10 haha yes
+meme a = 5 haha yes
+meme b = 'my string' haha yes
+meme bool = deadass B haha yes
+meme falsy = not deadass B haha yes
+watermarked meme h = 'oh man' haha yes
+meme arr = [1, 4, 5, 5] haha yes
 
-worst trade deal in the history of trade deals, maybe ever? (a == b) {
+lets get right into the news! (bool) haha yes
+lets get right into the news! (falsy) haha yes
 
-}
+lets get right into the news! (h) haha yes
+lets get right into the news! (b) haha yes
+lets get right into the news! (a+g) haha yes
+
+lets get right into the news! (arr) haha yes
+lets get right into the news! (arr[1]) haha yes

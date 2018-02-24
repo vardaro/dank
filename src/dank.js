@@ -1,4 +1,5 @@
 const fs = require('fs');
+const nrc = require('node-run-cmd');
 
 const typeChecker = require('./typechecker');
 const compile = require('./compiler');
@@ -24,13 +25,23 @@ const compileFile = path => {
         let type = typeChecker(cur);
         let unDanked = compile(cur, type);
         AST[i] = unDanked;
-        console.log(type);
     }
-    console.log('dank as fuck');
+
+    let output = AST.join("");
+    const cmdExec = "node -e\"" + output + "\"";
+    nrc.run(cmdExec, {
+        onData: (data) => {
+            console.log(data);
+        },
+        onError: (data) => {
+            console.log("oof");
+        }
+    });
+
 }
 
 
 module.exports = {
-    dir: compileDir,
+    // dir: compileDir,
     file: compileFile
 }
