@@ -1,7 +1,7 @@
 const operators = {
     "reposted from": "==",
-    "not ": "!",
-    
+    "deadass B": "true"  ,  
+    "not ": "!"
 }
 
 const replaceDankOperators = (string) =>{

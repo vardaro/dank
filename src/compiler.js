@@ -11,11 +11,7 @@ const parseVar = () => {
     let val = getStrBetween(dankasf, "= ", " haha yes");
 
     // bools are a special snowflake :)
-    if (val.includes("deadass B")) {
-        val = val.replace("not ", "!");
-        val = val.replace("deadass B", "true");
-
-    }
+    val = replaceDankOperators(val);
     let node;
 
     if (dankasf.includes('watermarked')) {
@@ -33,7 +29,7 @@ const parsePrintln = () => {
         args = args.replace("not ", "!");
     }
 
-
+    args = replaceDankOperators(args);
     return `console.log(${args});`;
 }
 
