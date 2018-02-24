@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vars": "node index -f \"./test/vars.dank\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.14.1"
+    "body-parser": "^1.18.2",
+    "commander": "^2.14.1",
+    "express": "^4.16.2"
   }
 }
