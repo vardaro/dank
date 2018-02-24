@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 const typeChecker = require('./typechecker');
+const compile = require('./compiler');
 
 const readBuffer = path => {
     return fs.readFileSync(path, 'utf8');
@@ -17,14 +18,17 @@ const compileFile = path => {
     for (let i = 0; i < len; i++) {
         let cur = buffer[i].trim();
 
-        typeChecker(cur);
+        // if white spce, skip
+        if (!cur) continue;
 
+        let type = typeChecker(cur);
+        let unDanked = compile(cur, type);
+        AST[i] = unDanked;
+        console.log(type);
     }
+    console.log('dank as fuck');
 }
 
-const compileDir = path => {
-
-}
 
 module.exports = {
     dir: compileDir,

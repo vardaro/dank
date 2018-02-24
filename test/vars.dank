@@ -1,8 +1,9 @@
 joke about clinical depression a = 5 haha yes
-
+joke about clinical depression b = 'my string' haha yes
+joke about clinical depression bool = deadass B haha yes
+joke about clinical depression falsy = not deadass B haha yes;
 lets get right into the news! (a) haha yes
 
 worst trade deal in the history of trade deals, maybe ever? (a == b) {
-    
-}
 
+}

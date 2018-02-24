@@ -2,6 +2,7 @@
 
 const program = require('commander');
 const dank = require('./src/dank.js');
+
 program
     .version('0.1.0')
     .option('-d, --dir', 'Path to folder containing WH code')
