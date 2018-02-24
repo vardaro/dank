@@ -7,9 +7,16 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "vars",
             "program": "${workspaceFolder}\\index.js",
             "args": ["-f", "./test/vars.dank"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "if statement",
+            "program": "${workspaceFolder}\\index.js",
+            "args": ["-f", "./test/if.dank"]
         }
     ]
 }

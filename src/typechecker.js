@@ -31,6 +31,8 @@ const determineType = (dankLine) => {
     if (isPrintln()) {
         return "println";
     }
+
+    return dankLine;
 }
 
 module.exports = determineType;

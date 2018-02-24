@@ -40,7 +40,9 @@ const parsePrintln = () => {
 const parseIf = () => {
     let args = getStrBetween(dankasf, "(", ")");
     args = replaceDankOperators(args);
-    console.log(args);
+
+    let node = `if (${args}) {`;
+    return node;
 }
 
 const compile = (line, type) => {
@@ -57,6 +59,8 @@ const compile = (line, type) => {
     if (type == "if") {
         return parseIf();
     }
+
+    return line;
 }
 
 module.exports = compile;
