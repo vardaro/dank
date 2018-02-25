@@ -48,7 +48,7 @@ const parseFor = () => {
     return node;
 }
 const parseFunction = () => {
-    let dec = getStrBetween(dankasf, "it ", "{");
+    let dec = getStrBetween(dankasf, "it ", "kek");
     return `function ${dec} {`;
 }
 const compile = (line, type) => {

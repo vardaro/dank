@@ -24,6 +24,7 @@ const compileFile = path => {
 
         // if white spce, skip
         if (!cur) continue;
+        if (cur.startsWith("oof ouch")) continue; //comments
 
         let type = typeChecker(cur);
 

@@ -5,6 +5,7 @@ const operators = {
     " haha yes": ";",
     "reaped more karma than": ">",
     "reaped less karma than": "<",
+    "kek": "}",
     "not ": "!"
 }
 
