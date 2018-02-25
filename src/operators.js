@@ -3,6 +3,8 @@ const operators = {
     "deadass B": "true"  , 
     "is": "=",
     " haha yes": ";",
+    "reaped more karma than": ">",
+    "reaped less karma than": "<",
     "not ": "!"
 }
 
