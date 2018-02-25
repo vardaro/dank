@@ -9,7 +9,8 @@
     "if": "node index -f \"./test/if.dank\"",
     "for": "node index -f \"./test/for.dank\"",
     "bubblesort": "node index -f \"./test/bubblesort.dank\"",
-    "func": "node index -f \"./test/functions.dank\""
+    "func": "node index -f \"./test/functions.dank\"",
+    "start": "node ./website/server.js"
   },
   "author": "",
   "license": "ISC",
