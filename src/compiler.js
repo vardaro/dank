@@ -41,6 +41,12 @@ const parseIf = () => {
     return node;
 }
 
+const parseFor = () => {
+    let maxIteration = getStrBetween(dankasf, "im ", " years");
+    let node = `for (let age = 0; age < ${maxIteration}; age++) {`;
+    return node;
+}
+
 const compile = (line, type) => {
     dankasf = line;
 
@@ -56,6 +62,9 @@ const compile = (line, type) => {
         return parseIf();
     }
 
+    if (type == "for") {
+        return parseFor();
+    }
     return line;
 }
 

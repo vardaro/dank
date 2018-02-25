@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "vars": "node index -f \"./test/vars.dank\"",
-    "if": "node index -f \"./test/if.dank\""
+    "if": "node index -f \"./test/if.dank\"",
+    "for": "node index -f \"./test/for.dank\"" 
     
   },
   "author": "",
