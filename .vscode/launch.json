@@ -17,6 +17,20 @@
             "name": "if statement",
             "program": "${workspaceFolder}\\index.js",
             "args": ["-f", "./test/if.dank"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "for statement",
+            "program": "${workspaceFolder}\\index.js",
+            "args": ["-f", "./test/for.dank"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "sort",
+            "program": "${workspaceFolder}\\index.js",
+            "args": ["-f", "./test/bubblesort.dank"]
         }
     ]
 }

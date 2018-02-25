@@ -1,10 +1,10 @@
-meme g = 10 haha yes
-meme a = 5 haha yes
-meme b = 'my string' haha yes
-meme bool = deadass B haha yes
-meme falsy = not deadass B haha yes
-watermarked meme h = 'oh man' haha yes
-meme arr = [1, 4, 5, 5] haha yes
+meme g is 10 haha yes
+meme a is 5 haha yes
+meme b is 'my string' haha yes
+meme bool is deadass B haha yes
+meme falsy is not deadass B haha yes
+watermarked meme h is 'oh man' haha yes
+meme arr is [1, 4, 5, 5] haha yes
 
 lets get right into the news! (bool) haha yes
 lets get right into the news! (falsy) haha yes

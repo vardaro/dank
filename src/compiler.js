@@ -7,8 +7,8 @@ const getStrBetween = (str, startString, endString) => {
 }
 
 const parseVar = () => {
-    let name = getStrBetween(dankasf, "meme ", " =");
-    let val = getStrBetween(dankasf, "= ", " haha yes");
+    let name = getStrBetween(dankasf, "meme ", " is");
+    let val = getStrBetween(dankasf, "is ", " haha yes");
 
     // bools are a special snowflake :)
     val = replaceDankOperators(val);
@@ -42,8 +42,9 @@ const parseIf = () => {
 }
 
 const parseFor = () => {
-    let maxIteration = getStrBetween(dankasf, "im ", " years");
-    let node = `for (let age = 0; age < ${maxIteration}; age++) {`;
+    let name = getStrBetween(dankasf, "im ", " years");
+    let maxIteration = getStrBetween(dankasf, "almost ", "!");
+    let node = `for (let ${name} = 0; ${name} < ${maxIteration}; ${name}++) {`;
     return node;
 }
 

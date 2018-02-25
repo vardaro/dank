@@ -1,6 +1,8 @@
 const operators = {
     "reposted from": "==",
-    "deadass B": "true"  ,  
+    "deadass B": "true"  , 
+    "is": "=",
+    " haha yes": ";", 
     "not ": "!"
 }
 

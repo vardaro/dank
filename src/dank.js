@@ -3,7 +3,7 @@ const nrc = require('node-run-cmd');
 
 const typeChecker = require('./typechecker');
 const compile = require('./compiler');
-
+const replaceDankOperators = require('./operators');
 const readBuffer = path => {
     return fs.readFileSync(path, 'utf8');
 }
@@ -23,6 +23,12 @@ const compileFile = path => {
         if (!cur) continue;
 
         let type = typeChecker(cur);
+
+        // if there is not dank about cur, just replace the operators and put it in the ast
+        if (type == cur) {
+            AST[i] = replaceDankOperators(cur);
+            continue;
+        }
         let unDanked = compile(cur, type);
         AST[i] = unDanked;
     }
