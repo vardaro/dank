@@ -2,6 +2,7 @@
 
 const program = require('commander');
 const dank = require('./src/dank.js');
+const nrc = require('node-run-cmd');
 
 program
     .version('0.1.0')
@@ -20,4 +21,6 @@ if (program.file) {
     let path = program.args[0];
     console.log(`\nFile: ${path}\n`);
     dank.file(path);
+
+    nrc.run("cmdmp3win \"./audio/airhorn.mp3\"");
 }
