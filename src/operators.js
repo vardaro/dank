@@ -2,7 +2,7 @@ const operators = {
     "reposted from": "==",
     "deadass B": "true"  , 
     "is": "=",
-    " haha yes": ";", 
+    " haha yes": ";",
     "not ": "!"
 }
 

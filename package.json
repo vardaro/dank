@@ -8,7 +8,8 @@
     "vars": "node index -f \"./test/vars.dank\"",
     "if": "node index -f \"./test/if.dank\"",
     "for": "node index -f \"./test/for.dank\"",
-    "bubblesort": "node index -f \"./test/bubblesort.dank\""     
+    "bubblesort": "node index -f \"./test/bubblesort.dank\"",
+    "func": "node index -f \"./test/functions.dank\""     
     
   },
   "author": "",

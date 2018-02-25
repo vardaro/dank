@@ -12,6 +12,10 @@ const isIf = () => {
 const isFor = () => {
     return DANK_LINE.includes("its not a phase mom!!")
 }
+
+const isFunctionDec = () => {
+    return DANK_LINE.includes("yo this is actually dope");
+}
 const isPrintln = () => {
     return DANK_LINE.includes("lets get right into the news!");
 }
@@ -31,9 +35,11 @@ const determineType = (dankLine) => {
     }
 
     if (isFor()) {
-        return "for"
+        return "for";
     }
-
+    if (isFunctionDec()) {
+        return "function";
+    }
     if (isPrintln()) {
         return "println";
     }

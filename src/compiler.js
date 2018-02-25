@@ -47,7 +47,10 @@ const parseFor = () => {
     let node = `for (let ${name} = 0; ${name} < ${maxIteration}; ${name}++) {`;
     return node;
 }
-
+const parseFunction = () => {
+    let dec = getStrBetween(dankasf, "it ", "{");
+    return `function ${dec} {`;
+}
 const compile = (line, type) => {
     dankasf = line;
 
@@ -65,6 +68,10 @@ const compile = (line, type) => {
 
     if (type == "for") {
         return parseFor();
+    }
+
+    if (type == "function") {
+        return parseFunction();
     }
     return line;
 }
