@@ -2,18 +2,33 @@ const replaceDankOperators = require('./operators');
 
 let dankasf = '';
 
+/**
+ * a function that returns the substring between two strings in a string
+ * @param {string} str string to parse
+ * @param {string} startString lower bound string
+ * @param {string} endString upper bound string
+ */
 const getStrBetween = (str, startString, endString) => {
     return str.substring(str.lastIndexOf(startString) + startString.length, str.lastIndexOf(endString)); // lmao what the hell is this
 }
 
+/**
+ * This function gets called if the dankasf line is an assignment,
+ * its parse the name of the var create, and the corresponding value
+ * then rewrites the js string using that data
+ * 
+ * ex: 
+ *  meme a = 5; => let a  = 5; 
+ */
 const parseVar = () => {
-    let name = getStrBetween(dankasf, "meme ", " is");
-    let val = getStrBetween(dankasf, "is ", " haha yes");
+    let name = getStrBetween(dankasf, "meme ", " =");
+    let val = getStrBetween(dankasf, "=", ";").trim();
 
     // bools are a special snowflake :)
     val = replaceDankOperators(val);
     let node;
 
+    // if the meme has been watermarked, make the variable a const
     if (dankasf.includes('watermarked')) {
         node = `const ${name} = ${val};`;
     } else {
@@ -22,9 +37,17 @@ const parseVar = () => {
     return node;
 }
 
+/**
+ * Writes a println statement
+ * parses the args of the println, and transpiles
+ * 
+ * ex:
+ *  muh "compiler optimizations" !! => console.log('compiler optimizations');
+ */
 const parsePrintln = () => {
-    let args = getStrBetween(dankasf, "(", ")");
+    let args = getStrBetween(dankasf, "muh ", " !!");
 
+    // this must be important, idk why but ill just keep it here
     if (args.includes("not")) {
         args = args.replace("not ", "!");
     }
@@ -33,14 +56,22 @@ const parsePrintln = () => {
     return `console.log(${args});`;
 }
 
+/**
+ * parses an if statement to a js if statement
+ */
 const parseIf = () => {
-    let args = getStrBetween(dankasf, "(", ")");
+    let args = getStrBetween(dankasf, "tfw ", "");
     args = replaceDankOperators(args);
 
     let node = `if (${args}) {`;
     return node;
 }
 
+/**
+ * rewrites a dank for loop into a js for loop
+ * ex:
+ *  if {myMeme} gets {numIteration} upvotes {} => for (let myMeme = 0; i < numIteration; myMeme++) {}
+ */
 const parseFor = () => {
     let name = getStrBetween(dankasf, "im ", " years");
     let maxIteration = getStrBetween(dankasf, "almost ", "!");

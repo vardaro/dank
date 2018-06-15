@@ -10,6 +10,11 @@ const readBuffer = path => {
     return fs.readFileSync(path, 'utf8');
 }
 
+
+/**
+ * Accepts path of .dank file as param and compiles that file
+ * @param {string} path 
+ */
 const compileFile = path => {
 
     let buffer = readBuffer(path);
@@ -19,25 +24,32 @@ const compileFile = path => {
     let len = buffer.length;
     let AST = [];
 
+
+    // iterate over the lines
     for (let i = 0; i < len; i++) {
         let cur = buffer[i].trim();
+        console.log(cur);
 
         // if white spce, skip
         if (!cur) continue;
-        if (cur.startsWith("oof ouch")) continue; //comments
+        // Danks comments are denoted by > at the beginning of the line
+        if (cur.startsWith(">")) continue; 
 
         let type = typeChecker(cur);
 
-        // if there is not dank about cur, just replace the operators and put it in the ast
+        // if there is nothing dank about cur, just replace the operators and put it in the ast lol
         if (type == cur) {
             AST[i] = replaceDankOperators(cur);
             continue;
         }
+
         let unDanked = compile(cur, type);
         AST[i] = unDanked;
     }
 
+
     let output = AST.join("");
+    console.log(output);
     const cmdExec = "node -e\"" + output + "\"";
 
 
@@ -53,6 +65,7 @@ const compileFile = path => {
 
 
 const compileString = (string, cb) => {
+
     // split by lines
     string = string.split(/(?:\r\n|\r|\n)/g);
 

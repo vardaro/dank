@@ -7,17 +7,17 @@ const isVar = () => {
     return DANK_LINE.includes("meme");
 }
 const isIf = () => {
-    return DANK_LINE.includes("worst trade deal in the history of trade deals") || DANK_LINE.includes("worst trade deal ever?");
+    return DANK_LINE.includes("tfw");
 }
 const isFor = () => {
-    return DANK_LINE.includes("its not a phase mom!!")
+    return DANK_LINE.includes("upvotes") && DANK_LINE.includes("if");
 }
 
 const isFunctionDec = () => {
     return DANK_LINE.includes("yo this is actually dope");
 }
 const isPrintln = () => {
-    return DANK_LINE.includes("lets get right into the news!");
+    return DANK_LINE.includes("muh");
 }
 
 const determineType = (dankLine) => {

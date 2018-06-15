@@ -1,17 +1,15 @@
-meme g is 10 haha yes
-meme a is 5 haha yes
-meme b is 'my string' haha yes
-meme bool is deadass B haha yes
-meme falsy is not deadass B haha yes
-watermarked meme h is 'oh man' haha yes
-meme arr is [1, 4, 5, 5] haha yes
+> create a int of 5
+meme int = 5;
+muh int !!
 
-lets get right into the news! (bool) haha yes
-lets get right into the news! (falsy) haha yes
+> int array
+meme intArray = [1,2,4,5];
+muh intArray !!
 
-lets get right into the news! (h) haha yes
-lets get right into the news! (b) haha yes
-lets get right into the news! (a+g) haha yes
+> strings
+meme string = 'hello world';
+muh string !!
 
-lets get right into the news! (arr) haha yes
-lets get right into the news! (arr[1]) haha yes
+> bools
+meme bool = not deadass B;
+muh bool !!

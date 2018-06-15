@@ -22,5 +22,6 @@ if (program.file) {
     console.log(`\nFile: ${path}\n`);
     dank.file(path);
 
+    // play the airhorn lol
     nrc.run("cmdmp3win \"./audio/airhorn.mp3\"");
 }
