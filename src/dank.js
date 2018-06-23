@@ -28,10 +28,10 @@ const compileFile = path => {
     // iterate over the lines
     for (let i = 0; i < len; i++) {
         let cur = buffer[i].trim();
-        console.log(cur);
 
         // if white spce, skip
         if (!cur) continue;
+
         // Danks comments are denoted by > at the beginning of the line
         if (cur.startsWith(">")) continue; 
 
@@ -44,6 +44,7 @@ const compileFile = path => {
         }
 
         let unDanked = compile(cur, type);
+
         AST[i] = unDanked;
     }
 

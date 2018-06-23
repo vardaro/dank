@@ -1,5 +1,6 @@
 const operators = {
     "reposted from": "==",
+    "is not": "!=",
     "is": "==",
     "to": "=",
     "deadass B": "true"  , 

@@ -1,13 +1,28 @@
-meme a is 10 haha yes
+til a = 10;
 
-meme b is 20 haha yes
+til b = 20;
 
-meme trueBool = deadass B haha yes
+til trueBool = deadass B;
 
-worst trade deal ever? (a not reposted from b) {
-    lets get right into the news! (a) haha yes
+> should work
+tfw a is not b {
+    muh 'working if statement' !!
 }
-
-worst trade deal in the history of trade deals, maybe ever? (deadass B) {
-    lets get right into the news! (deadass B) haha yes
+> should not work
+tfw a is b {
+    muh 'not working if statement' !!
+}
+> should work
+tfw trueBool {
+    muh trueBool !!
+}
+> should not work
+tfw not trueBool {
+    muh not trueBool !!
+}
+> nested if statement
+tfw a is not b {
+    tfw trueBool {
+        muh 'nested if statement' !!
+    }
 }

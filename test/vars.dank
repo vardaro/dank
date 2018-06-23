@@ -1,15 +1,15 @@
 > create a int of 5
-meme int = 5;
+til int = 5;
 muh int !!
 
 > int array
-meme intArray = [1,2,4,5];
+til intArray = [1,2,4,5];
 muh intArray !!
 
 > strings
-meme string = 'hello world';
+til string = 'hello world';
 muh string !!
 
 > bools
-meme bool = not deadass B;
+til bool = not deadass B;
 muh bool !!

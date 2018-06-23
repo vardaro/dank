@@ -18,10 +18,10 @@ const getStrBetween = (str, startString, endString) => {
  * then rewrites the js string using that data
  * 
  * ex: 
- *  meme a = 5; => let a  = 5; 
+ *  til a = 5; => let a  = 5; 
  */
 const parseVar = () => {
-    let name = getStrBetween(dankasf, "meme ", " =");
+    let name = getStrBetween(dankasf, "til ", " =");
     let val = getStrBetween(dankasf, "=", ";").trim();
 
     // bools are a special snowflake :)
@@ -60,7 +60,7 @@ const parsePrintln = () => {
  * parses an if statement to a js if statement
  */
 const parseIf = () => {
-    let args = getStrBetween(dankasf, "tfw ", "");
+    let args = getStrBetween(dankasf, "tfw ", " {");
     args = replaceDankOperators(args);
 
     let node = `if (${args}) {`;

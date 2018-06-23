@@ -4,7 +4,7 @@ const isConst = () => {
     return DANK_LINE.includes("watermarked meme");
 }
 const isVar = () => {
-    return DANK_LINE.includes("meme");
+    return DANK_LINE.includes("til");
 }
 const isIf = () => {
     return DANK_LINE.includes("tfw");
